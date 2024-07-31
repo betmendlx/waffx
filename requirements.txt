@@ -1,0 +1,5 @@
+Python 3.7+
+aiohttp
+aiohttp_retry
+PyYAML
+python-dotenv
