@@ -21,7 +21,7 @@ This tool is designed to detect the presence of Web Application Firewalls (WAFs)
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/waf-detection-tool.git
+    git clone https://github.com/betmendlx/waffx.git
     cd waf-detection-tool
     ```
 
